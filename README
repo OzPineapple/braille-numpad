@@ -1,0 +1,47 @@
+# Another braille translator
+
+So I was thinking about this shitty projects where people use an arduino and some cheap digital keyboard to yell "inclusive"
+but I don't think you are going to throw a protoboard to a blind person face and say "now you can use a computer!".
+Also there is this blind person keyboard online you can buy (I think the ones with the braille feedback on the bottom are pretty cool)
+with some weird shapes but if you are honest those are expensive and pretty weird to see.
+A lot of nowadays keyboard have the numerical pad at the right side and it kinda looks like a braille input keyboard.
+
+This is a proof of concept, if I don't get puer aeternus by this crap I will try to improve this.
+I just hope that someone doesn't fork it before and make a better version so I'd look like an idiot.
+
+The program right now just prints unicode braille characters in UTF-8 encoding…
+
+## Instructions
+
+- compile and run duh
+- Put the number pad in _block number_
+- The mapping for the braille keyboard is the next where the numbers represent the standard braille indexes,
+
+**Normal usage**    **Braille mode**
+
+┌───┬───┬───┬───┐  ┌───┬───┬───┬───┐
+│ # │ / │ * │ - │  │ ␑ │   │   │ ␃ │
+├───┼───┼───┼───┤  ├───┼───┼───┼───┤
+│ 7 │ 8 │ 9 │   │  │   │ ① │ ④ │   │
+├───┼───┼───┤ + │  ├───┼───┼───┤   │
+│ 4 │ 5 │ 6 │   │  │ ⑦ │ ② │ ⑤ │   │
+├───┼───┼───┼───┤  ├───┼───┼───┼───┤
+│ 1 │ 2 │ 3 │   │  │ ⑧ │ ③ │ ⑥ │   │
+├───┴───┼───┤ ␤ │  ├───┴───┼───┤ ␆ │
+│   0   │ . │   │  │ space │   │   │
+└───────┴───┴───┘  └───────┴───┴───┘
+
+- Press the dots and then enter key to generate a braille character
+- Press '-' key to stop the program
+
+## TODO
+
+- Read keys instead of char so no need to block number
+- Make a beep for each braille character (I think a synthetic voice is annoying 
+- Map to ASCII braille
+- Send braille to bash input so you can actually use the dam computer
+- Vocalize commands outputs
+
+## PD
+
+So that, idk… eat well and don't download League of legends
