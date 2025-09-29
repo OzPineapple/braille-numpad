@@ -9,7 +9,12 @@ A lot of nowadays keyboard have the numerical pad at the right side and it kinda
 This is a proof of concept, if I don't get puer aeternus by this crap I will try to improve this.
 I just hope that someone doesn't fork it before and make a better version so I'd look like an idiot.
 
-The program right now just prints unicode braille characters in UTF-8 encoding…
+The program prints braille unicode characters and the translation in ascii english alphabet.
+Keys produce a sound with the pc beeper so you the program beep in order to work.
+
+## Dependencies
+
+https://github.com/spkr-beep/beep
 
 ## Instructions
 
@@ -23,24 +28,29 @@ The program right now just prints unicode braille characters in UTF-8 encoding�
 │ # │ / │ * │ - │  │ ␑ │   │   │ ␃ │
 ├───┼───┼───┼───┤  ├───┼───┼───┼───┤
 │ 7 │ 8 │ 9 │   │  │   │ ① │ ④ │   │
-├───┼───┼───┤ + │  ├───┼───┼───┤   │
+├───┼───┼───┤ + │  ├───┼───┼───┤ ␡ │
 │ 4 │ 5 │ 6 │   │  │ ⑦ │ ② │ ⑤ │   │
 ├───┼───┼───┼───┤  ├───┼───┼───┼───┤
 │ 1 │ 2 │ 3 │   │  │ ⑧ │ ③ │ ⑥ │   │
 ├───┴───┼───┤ ␤ │  ├───┴───┼───┤ ␆ │
-│   0   │ . │   │  │ space │   │   │
+│   0   │ . │   │  │   ␆   │ ␍ │   │
 └───────┴───┴───┘  └───────┴───┴───┘
 
-- Press the dots and then enter key to generate a braille character
+- Press the dots and then enter zero to generate a braille character
+- Press enter to translate the braille to english
 - Press '-' key to stop the program
 
 ## TODO
 
 - Read keys instead of char so no need to block number
-- Make a beep for each braille character (I think a synthetic voice is annoying 
-- Map to ASCII braille
 - Send braille to bash input so you can actually use the dam computer
 - Vocalize commands outputs
+- Fix the dam utf8 in/out or even use latin-1… still thinking about it
+
+# DONE
+
+- Make a beep for each braille character (I think a synthetic voice is annoying 
+- Map to ASCII braille
 
 ## PD
 
